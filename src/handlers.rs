@@ -49,7 +49,7 @@ pub async fn create_quote(
     let res = sqlx::query(
         r#"
     INSERT INTO quotes (id, book, quote, inserted_at, updated_at)
-    VALUES ($1, $2, $3, $4, $5"#,
+    VALUES ($1, $2, $3, $4, $5)"#,
     )
     .bind(&quote.id)
     .bind(&quote.book)
